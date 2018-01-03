@@ -1,0 +1,140 @@
+#dumb quiz to find out if you are an apple or orange
+acount = 0 #apple score count
+ocount = 0 #orange score
+orange1 = ['Orange', 'orange']
+apple1 = ['Red', 'red', 'Green', 'green', 'Yellow', 'yellow'] #Library,Question number
+#Could use libraries for every question in order to make it more responsive to different answers but that would add a lot of code and this is mostly a proof of concept program not a practical one
+test1 = True
+while test1:
+    ans1 = input("What color are you? Red, Green, Orange, or Yellow? ")
+    if ans1 == 'Red' or ans1 == 'Green' or ans1 == 'Yellow':
+        acount = acount + 1
+        test1 = False
+        print(" ") #formating
+        continue
+    elif ans1 in orange1:
+        ocount = ocount + 1
+        test1 = False
+        print(" ") #formating
+        continue
+    else:
+        print(" ") #formating
+        print("Please try again, make sure you type the answer exactly as written in the question!")
+        print(" ") #formating
+
+test2 = True
+while test2:
+    ans2 = input("Do you have a lot of vitamin C? Yes or No? ")
+    if ans2 == 'No':
+        acount = acount + 1
+        test2 = False
+        print(" ") #formating
+        continue
+    elif ans2 == 'Yes':
+        ocount = ocount + 1
+        test2 = False
+        print(" ") #formating
+        continue
+    else:
+        print(" ") #formating
+        print("Please try again, make sure you type the answer exactly as written in the question!")
+        print(" ") #formating
+
+test3 = True
+while test3:
+    ans3 = input("Is your skin Thick or Thin? ")
+    if ans3 == 'Thin':
+        acount = acount + 1
+        test3 = False
+        print(" ") #formating
+        continue
+    elif ans3 == 'Thick':
+        ocount = ocount + 1
+        test3 = False
+        print(" ") #formating
+        continue
+    else:
+        print(" ") #formating
+        print("Please try again, make sure you type the answer exactly as written in the question!")
+        print(" ") #formating
+
+test4 = True
+while test4:
+    ans4 = input("Do you bruise easily? Yes or No? ")
+    if ans4 == 'Yes' or ans4 == 'yes' or ans4 == 'y':
+        acount = acount + 1
+        test4 = False
+        print(" ") #formating
+        continue
+    elif ans4 == 'No' or ans4 == 'no' or ans4 =='n':
+        ocount = ocount + 1
+        test4 = False
+        print(" ") #formating
+        continue
+    else:
+        print(" ") #formating
+        print("Please try again, make sure you type the answer exactly as written in the question!")
+        print(" ") #formating
+        
+test5 = True
+while test5:
+    ans5 = input("Are you a berry or a fruit? ")
+    if ans5 == 'Berry' or ans5 == 'berry':
+        ocount = ocount + 1
+        test5 = False
+        print(" ") #formating
+        continue
+    elif ans5 == 'Fruit' or ans5 == 'fruit':
+        acount = acount + 1
+        test5 = False
+        print(" ") #formating
+        continue
+    else:
+        print(" ") #formating
+        print("Please try again, make sure you type the answer exactly as written in the question!")
+        print(" ") #formating
+
+test6 = True
+while test6:
+    ans6 = input("Are you common in the wild, Yes or no? ")
+    if ans6 == 'Yes' or ans6 == 'yes':
+        acount = acount + 1
+        test6 = False
+        print(" ") #formating
+        continue
+    elif ans6 == 'No' or ans6 == 'no':
+        ocount = ocount + 1
+        test6 = False
+        print(" ") #formating
+        continue
+    else:
+        print(" ") #formating
+        print("Please try again, make sure you type the answer exactly as written in the question!")
+        print(" ") #formating
+
+test7 = True
+while test7:
+    ans7 = input("Do you help prevent scurvy, Yes or No? ")
+    if ans7 == 'Yes' or ans7 =='yes':
+        ocount = ocount + 1
+        test7 = False
+        print(" ") #formating
+        continue
+    elif ans7 == 'No' or ans7 == 'no':
+        acount = acount + 1
+        test7 = False
+        print(" ") #formating
+        continue
+    else:
+        print(" ") #formating
+        print("Please try again, make sure you type the answer exactly as written in the question!")
+        print(" ") #formating
+
+print(" ")#formating
+
+if ocount >= 5:
+    print("You are a ",ocount,"/7 orange!")
+else:
+    print("You are a ",acount,"/7 apple!")
+
+input("Press <enter> To Close")
