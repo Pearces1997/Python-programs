@@ -1,0 +1,25 @@
+#Guessing game
+import random  #for setting random number at start of game
+number = random.randint(1,9)
+guess = 0
+count = 0
+
+while guess != number and guess != "Exit":
+        guess = input("Guess a number 1-9! ")
+
+        if guess == "Exit":
+            break
+
+        guess = int(guess) #for counting attempts
+        count += 1
+
+        if guess < number:
+            print("Too low!")
+        elif guess > number:
+            print("Too high!")
+        else:
+            print("Correct!")
+            print("It took you",count,"tries!")
+input("Press<enter>ToEnd")
+
+
