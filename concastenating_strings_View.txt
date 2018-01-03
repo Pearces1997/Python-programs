@@ -1,0 +1,15 @@
+#concastenating strings
+a = "Joining"
+c = "strings"
+z = "is"
+e = "easy"
+o = ","
+t = "thanks"
+u = "to"
+k = "how"
+q = "easy"
+p = "python"
+m = "is"
+l = "!"
+print(a, c, z, e + o, t, u, k, q, p, m + l) 
+input("Press<enter>ToEnd") 

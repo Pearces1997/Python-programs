@@ -1,0 +1,135 @@
+#Semi-Complex calorie calculator/weightloss calculator
+#interactive dictionary with values
+#Dict_format {'Food':calories'}
+#Work in progress<-------------------------------------
+Age = 0
+bmr = 0
+GenderConstant = 0
+Height = 0
+ActivityConstant = 0
+Weight = 0
+CalorieNeeds = 0
+Calorie_Input = {'Banana':105}
+
+AgeQuestion = True
+while AgeQuestion:
+    Age = int(input('What is your age? '))#breaks with special characters and strings Issue with loop structure possibly?...
+    if Age > 0 and Age < 123:
+        AgeQuestion = False
+        continue
+    elif Age == 123:
+        AgeQuestion = False
+        print('Are you the current record holder? You are quite old!')
+        continue
+    else:
+        print(" ") #formating
+        print("I think your age might be off! Please try again!")
+        print(" ") #formating
+
+print(" ")#formating
+print(Age)
+print(" ")#formating
+
+Genderquestion = True #Need to ask gender to calculate base metabolic rate
+while Genderquestion:
+    Gender = input("Are you a boy or girl? ") #breaks with strings that have overlap ex: 'male' and fe'male' and int Issue with loop structure possibly?...
+    if Gender == 'Boy' or Gender == 'boy':
+        GenderConstant = 5
+        Genderquestion = False
+        print(" ")#formating
+        continue
+    elif Gender == 'Girl' or Gender == 'girl':
+        GenderConstant = -161
+        Genderquestion = False
+        print(" ") #formating
+        continue
+    else:
+        print(" ") #formating
+        print("Please try again, make sure you type the answer exactly as written in the question!")
+        print(" ") #formating
+
+print(" ")#formating
+print(GenderConstant)
+print(" ")#formating
+
+Weightquestion = True #Need to ask weight to calculate base metabolic rate
+while Weightquestion:
+    Weight = int(input("What is your weight in kilograms? ")) #breaks with strs and special characters example: ,.;'!@#$ Issue with loop structure possibly?...
+    if Weight > 0 and Weight < 2000:
+        Weightquestion = False
+        print(" ")#formating
+        continue
+    elif Weight >= 2000:
+        print("At that weight I think you may need to consult a doctor not this program! ")
+        Weightquestion = False
+        continue
+    else:
+        print(" ") #formating
+        print("At that weight I think you may need to consult a doctor not this program! ")
+        print(" ") #formating
+
+print(Weight)
+
+Heightquestion = True #Need to ask height to calculate base metabolic rate
+while Heightquestion:
+    print(" ")#formating
+    Height = int(input("How tall are you in cm? (1 foot = 30.48cm!) "))#breaks with strs and special characters Issue with loop structure possibly?...
+    if Height > 0 and Height < 272.034:
+        print(" ")#formating
+        Heightquestion = False
+        continue
+    elif Height == 272.034:
+        print(" ")#formating
+        print("Hello worlds tallest man!")
+        print(" ")#formating
+        Heightquestion = False
+        continue
+    else:
+        print(" ") #formating
+        print("I think your height might be a tad off!")
+        print(" ") #formating
+
+Activityquestion = True #Need to ask activity to calculate base metabolic rate
+while Heightquestion:
+    print(" ")#formating
+    ActivityLevel = input("How active are you ")#breaks with ints and special characters example: 12, 3, 4 or @!#!';..,;';%&* Issue with loop structure possibly?...
+    if Height > 0 and Height < 272.034:
+        print(" ")#formating
+        Heightquestion = False
+        continue
+    elif Height == 272.034:
+        print(" ")#formating
+        print("Hello worlds tallest man!")
+        print(" ")#formating
+        Heightquestion = False
+        continue
+    else:
+        print(" ") #formating
+        print("I think your height might be a tad off!")
+        print(" ") #formating
+
+#For men: BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) + 5
+
+#For women BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) - 161
+
+print(Height)#formating
+print(" ")
+bmr = 10 * Weight + 6.25 * Height - 5 * Age - GenderConstant
+print('The amount of calories required to maintain your current weight is ',+CalorieNeeds )
+print(" ")#formating
+
+
+
+
+
+print(Calorie_Input['Banana'])
+
+
+
+
+
+
+
+input("Press<enter>ToEnd")
+
+
